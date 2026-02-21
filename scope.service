@@ -1,0 +1,27 @@
+[Unit]
+Description=Scope API server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/scope
+EnvironmentFile=/var/www/scope/.env
+
+ExecStart=/var/www/scope/venv/bin/gunicorn \
+    --workers 2 \
+    --bind 127.0.0.1:5000 \
+    --timeout 180 \
+    --worker-class sync \
+    --access-logfile - \
+    app:app
+
+Restart=on-failure
+RestartSec=5
+
+# Prevent the service from writing outside its directory
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
