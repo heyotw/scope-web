@@ -4,7 +4,7 @@ An AI chat app built on Cloudflare Workers AI. Uses Llama 4 Scout (17B) for both
 
 I built this as a personal project, and also as an addition to the actual Scope bot, which is a Discord and Roblox bot made with the goal of keeping players safe from possible predators.
 
-![Dark mode screenshot](https://github.com/heyotw/scope-web/showcase/showcase-dark-mode.png)
+![Dark mode screenshot](https://raw.githubusercontent.com/heyotw/scope-web/refs/heads/main/showcase/showcase-dark-mode.png)
 
 ---
 
